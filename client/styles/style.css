@@ -97,7 +97,7 @@ form {
   margin: 10px;
 }
 
-input {
+input[type=text] {
   width: 360px;
   display: block;
   font-size: 13px;
