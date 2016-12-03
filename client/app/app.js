@@ -7,9 +7,6 @@ angular.module('shortly', [
 ])
 .config(function ($routeProvider, $httpProvider) {
   $routeProvider
-    .when('/', {
-      redirectTo: '/links'
-    })
     .when('/signin', {
       templateUrl: 'app/auth/signin.html',
       controller: 'AuthController'
@@ -27,6 +24,9 @@ angular.module('shortly', [
       templateUrl: 'app/shorten/shorten.html',
       controller: 'ShortenController',
       authenticate: true
+    })
+    .otherwise({
+      redirectTo: '/links'
     });
 
     // We add our $httpInterceptor into the array
